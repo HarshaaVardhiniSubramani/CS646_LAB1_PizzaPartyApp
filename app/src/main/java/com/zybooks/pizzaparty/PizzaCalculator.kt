@@ -4,8 +4,17 @@ import kotlin.math.ceil
 
 const val SLICES_PER_PIZZA = 8
 
+/**
+ * Pizza Calculator
+ *
+ * This class calculates total number of Pizzas required based on
+ * number of people and their hunger level.
+ *
+ * @param [partySize] Number of people
+ * @param [hungerLevel] hunger level of people
+ */
 class PizzaCalculator(partySize: Int, var hungerLevel: HungerLevel) {
-    var partySize = 0
+    private var partySize = 0
         set(value) {
             field = if (value >= 0) value else 0
         }
